@@ -6,6 +6,25 @@
   <title>Portafolio de Jesús Rodríguez</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <style>
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: auto;
+    }
+    h1 {
+      margin-left: 120px;
+    }
+  </style>
 </head>
 <body>
   <!-- Fondo animado -->
@@ -19,6 +38,7 @@
 
   <!-- Contenido principal -->
   <header>
+    <img src="https://grados.upla.edu.pe/Herramientas/Recursos/imagenes/LOGO-OFICINA.png" alt="Logo UPLA" class="logo">
     <h1>📘 Portafolio Electrónico</h1>
     <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
   </header>
@@ -27,7 +47,7 @@
     <section class="modulos">
       <div class="modulo" onclick="location.href='unidad1/index.html'">
         <h2>Unidad 1</h2>
-        <p>Fundamentos y clases introductorias.</p>
+        <p>Explica los Fundamentos de la Arquitectura de Software, utilizando los estándares internacionales, para la producción del software.</p>
       </div>
       <div class="modulo" onclick="location.href='unidad2/index.html'">
         <h2>Unidad 2</h2>
@@ -45,7 +65,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Jesús Rodríguez</p>
+    <p>© 2025 Jesús Alfredo Rodriguez Tarazona</p>
   </footer>
 </body>
 </html>
