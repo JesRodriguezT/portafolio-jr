@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidad 1 - Semana 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Unidad 1 – Semana 2</h1>
+    <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
+  </header>
+
+  <main>
+    <section class="modulos">
+      <div class="modulo">
+        <h2>📘 Contenido de la semana</h2>
+        <p>Exploración de conceptos clave, ejemplos prácticos y análisis de casos reales.</p>
+      </div>
+    </section>
+
+    <section class="modulos">
+      <div class="modulo">
+        <h2>📁 Subir archivos</h2>
+        <form id="uploadForm">
+          <input type="file" id="fileInput" multiple>
+          <button type="submit">Subir</button>
+        </form>
+        <h3>Archivos cargados:</h3>
+        <ul id="fileList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html">← Volver a Unidad 1</a></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      fileList.innerHTML = '';
+      for (const file of fileInput.files) {
+        const li = document.createElement('li');
+        li.textContent = file.name;
+        fileList.appendChild(li);
+      }
+    });
+  </script>
+</body>
+</html>
