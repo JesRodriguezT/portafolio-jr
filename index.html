@@ -1,71 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
   <title>Portafolio de Jesús Rodríguez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background-color: #007acc;
+      color: white;
       padding: 20px;
+      text-align: center;
       position: relative;
     }
-    .logo {
+
+    .logo-upla {
       position: absolute;
       top: 10px;
       left: 10px;
-      width: 100px;
+      width: 90px;
       height: auto;
+      z-index: 2;
     }
-    h1 {
-      margin-left: 120px;
+
+    .sobre-mi {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+      background-color: #f5f5f5;
+    }
+
+    .sobre-mi img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .sobre-mi-texto {
+      max-width: 600px;
+    }
+
+    .sobre-mi-texto h2 {
+      margin-bottom: 10px;
+      color: #007acc;
+    }
+
+    .boton-login {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .boton-login:hover {
+      background-color: #005f99;
     }
   </style>
 </head>
 <body>
-  <!-- Fondo animado -->
-  <div class="grid-background">
-    <div class="grid">
-      <div>1</div><div>2</div><div>3</div>
-      <div>4</div><div>5</div><div>6</div>
-      <div>7</div><div>8</div><div>9</div>
-    </div>
-  </div>
-
-  <!-- Contenido principal -->
   <header>
-    <img src="https://grados.upla.edu.pe/Herramientas/Recursos/imagenes/LOGO-OFICINA.png" alt="Logo UPLA" class="logo">
-    <h1>📘 Portafolio Electrónico</h1>
-    <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
+    <img src="https://grados.upla.edu.pe/Herramientas/Recursos/imagenes/LOGO-OFICINA.png" alt="Logo UPLA" class="logo-upla">
+    <h1>Portafolio Estudiantil</h1>
   </header>
 
-  <main>
-    <section class="modulos">
-      <div class="modulo" onclick="location.href='unidad1/index.html'">
-        <h2>Unidad 1</h2>
-        <p>Explica los Fundamentos de la Arquitectura de Software, utilizando los estándares internacionales, para la producción del software.</p>
-      </div>
-      <div class="modulo" onclick="location.href='unidad2/index.html'">
-        <h2>Unidad 2</h2>
-        <p>Contenido intermedio y análisis aplicado.</p>
-      </div>
-      <div class="modulo" onclick="location.href='unidad3/index.html'">
-        <h2>Unidad 3</h2>
-        <p>Casos prácticos y herramientas digitales.</p>
-      </div>
-      <div class="modulo" onclick="location.href='unidad4/index.html'">
-        <h2>Unidad 4</h2>
-        <p>Síntesis final y propuestas de mejora.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Jesús Alfredo Rodriguez Tarazona</p>
-  </footer>
+  <section class="sobre-mi">
+    <img src="https://via.placeholder.com/200x200.png?text=Jesús+Rodríguez" alt="Foto de Jesús Rodríguez">
+    <div class="sobre-mi-texto">
+      <h2>Sobre mí</h2>
+      <p>Hola, soy <strong>Jesús Rodríguez</strong>, estudiante de Ingeniería de Sistemas. Este es mi portafolio estudiantil de Arquitectura de Software, donde comparto contenidos, actividades y recursos desarrollados durante el curso.</p>
+      <a href="#" class="boton-login">Iniciar sesión</a>
+    </div>
+  </section>
 </body>
 </html>
