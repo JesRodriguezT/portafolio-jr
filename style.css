@@ -1,108 +1,191 @@
-/* Fondo degradado y cuadrícula animada */
+/* ---------------------------------- */
+/* 1. VARIABLES (TEMA TECNOLÓGICO)    */
+/* ---------------------------------- */
+:root {
+  --color-background-start: #020c1b; /* Casi negro */
+  --color-background-end: #0a192f;   /* Azul marino muy oscuro */
+  --color-text-primary: #ccd6f6;     /* Texto principal (gris claro azulado) */
+  --color-text-secondary: #8892b0;   /* Texto secundario (gris más oscuro) */
+  --color-accent: #64ffda;           /* Acento principal (cian eléctrico) */
+  --color-surface: #112240;          /* Color para las tarjetas (azul oscuro) */
+  --color-border: rgba(100, 255, 218, 0.2); /* Borde cian semitransparente */
+  --shadow-main: 0 4px 10px rgba(0,0,0,0.4);
+  --shadow-strong: 0 0 15px rgba(100, 255, 218, 0.1);
+  --border-radius-main: 6px; /* Bordes ligeramente más sutiles */
+}
+
+/* ---------------------------------- */
+/* 2. ESTILOS GLOBALES              */
+/* ---------------------------------- */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(coral, rebeccapurple);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-background-end);
+  background-image: linear-gradient(180deg, var(--color-background-start), var(--color-background-end));
+  color: var(--color-text-primary);
   min-height: 100vh;
   box-sizing: border-box;
   position: relative;
   overflow-x: hidden;
+  padding-top: 60px; 
 }
 
-/* Cuadrícula animada como fondo decorativo */
-.grid-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.grid {
-  perspective: 600px;
-  display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 150px);
-  gap: 20px;
-  transform: rotate(45deg);
-}
-
-.grid div {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 20px;
-  color: transparent;
-  box-shadow: 30px 30px 30px -20px rgba(0, 0, 0, 0.6);
-  border-radius: 2px;
-}
-
-.grid div:nth-child(odd) {
-  animation: pulse 1000ms ease-in-out infinite alternate;
-}
-
-.grid div:nth-child(even) {
-  animation: pulse 1000ms 1000ms ease-in-out infinite alternate;
-}
-
-@keyframes pulse {
-  to {
-    transform: translate3d(0px, 0px, -60px);
-    box-shadow: 15px 15px 20px -20px rgba(0, 0, 0, 0.8);
-  }
-}
-
-/* Contenido principal encima del fondo */
-header, main, footer {
+/* ---------------------------------- */
+/* 3. LAYOUT Y ESTRUCTURA         */
+/* ---------------------------------- */
+main, footer {
   position: relative;
   z-index: 1;
   padding: 20px;
   text-align: center;
-  color: white;
 }
 
-header {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid white;
-}
-
-button {
-  background-color: white;
-  color: rebeccapurple;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modulos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.modulo {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
-  padding: 20px;
-  border-radius: 8px;
-  color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.modulo:hover {
-  transform: scale(1.03);
-  background-color: rgba(255, 255, 255, 0.3);
+main {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 footer {
   margin-top: 40px;
   font-size: 0.9em;
+  color: var(--color-text-secondary);
+}
+
+footer a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ---------------------------------- */
+/* 4. COMPONENTES                 */
+/* ---------------------------------- */
+.modulo {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 25px;
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--shadow-main);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  display: block;
+  text-align: left;
+}
+
+.modulo:hover {
+  transform: translateY(-5px); /* Efecto de levitación al pasar el mouse */
+  box-shadow: var(--shadow-strong);
+}
+
+.modulo h2 {
+  margin-top: 0;
+  color: var(--color-accent); /* Títulos con el color de acento */
+}
+
+.modulo p {
+  color: var(--color-text-secondary);
+}
+
+iframe {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--shadow-strong);
+  margin-top: 20px;
+  width: 100%;
+  height: 480px;
+}
+
+/* ---------------------------------- */
+/* 5. HEADER Y NAVEGACIÓN PROFESIONAL */
+/* ---------------------------------- */
+.main-header {
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+.nav-logo img {
+  height: 35px;
+  width: auto;
+  display: block;
+  transition: filter 0.2s ease;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-menu a:hover {
+  color: var(--color-accent);
+}
+
+.nav-toggle-button {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-toggle-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* ---------------------------------- */
+/* 6. SECCIÓN DE INTRODUCCIÓN       */
+/* ---------------------------------- */
+.intro-section {
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: var(--border-radius-main);
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.intro-section h2 {
+  color: var(--color-accent);
+}
+
+.intro-section p {
+  line-height: 1.7;
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-text-secondary);
 }

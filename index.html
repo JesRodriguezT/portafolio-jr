@@ -1,133 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portafolio de Jesús Rodríguez</title>
+  <meta charset="UTF-8">
+  <title>Mi Portafolio de Arquitectura de Software</title>
+  
+  <meta name="description" content="Portafolio del curso de Arquitectura de Software, recopilando los trabajos de las 4 unidades.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <style>
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-      position: relative;
-    }
-
-    .logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 100px;
-      height: auto;
-    }
-
-    h1 {
-      margin-left: 120px;
-    }
-
-    .botones-header {
-      display: flex;
-      gap: 10px;
-    }
-
-    .sobre-mi {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      gap: 30px;
-      background-color: #f5f5f5;
-    }
-
-    .sobre-mi img {
-      width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .sobre-mi-texto {
-      max-width: 600px;
-    }
-
-    .sobre-mi-texto h2 {
-      margin-bottom: 10px;
-      color: #007acc;
-    }
-
-    .boton-login {
-      padding: 10px 20px;
-      background-color: #007acc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .boton-login:hover {
-      background-color: #005f99;
-    }
-  </style>
 </head>
 <body>
-  <!-- Fondo animado -->
-  <div class="grid-background">
-    <div class="grid">
-      <div>1</div><div>2</div><div>3</div>
-      <div>4</div><div>5</div><div>6</div>
-      <div>7</div><div>8</div><div>9</div>
-    </div>
-  </div>
 
-  <!-- Encabezado -->
-  <header>
-    <img src="https://grados.upla.edu.pe/Herramientas/Recursos/imagenes/LOGO-OFICINA.png" alt="Logo UPLA" class="logo">
-    <h1>📘 Portafolio Electrónico</h1>
-    <div class="botones-header">
-      <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
-      <a href="login.html" class="boton-login">Iniciar sesión</a>
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="index.html" class="nav-logo">
+        <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
+      </a>
 
-      
-    </div>
+      <ul class="nav-menu">
+        <li><a href="unidad1/index.html">Unidad 1</a></li>
+        <li><a href="unidad2/index.html">Unidad 2</a></li>
+        <li><a href="unidad3/index.html">Unidad 3</a></li>
+        <li><a href="unidad4/index.html">Unidad 4</a></li>
+        <li><a href="perfil.html">Sobre Mí</a></li>
+      </ul>
+
+      <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
+    </nav>
   </header>
-
-  <!-- Sección sobre mí -->
-  <section class="sobre-mi">
-    <img src="https://via.placeholder.com/200x200.png?text=Jesús+Rodríguez" alt="Foto de Jesús Rodríguez">
-    <div class="sobre-mi-texto">
-      <h2>Sobre mí</h2>
-      <p>Hola, soy <strong>Jesús Rodríguez</strong>, estudiante de Ingeniería de Sistemas. Este es mi portafolio estudiantil de Arquitectura de Software, donde comparto contenidos, actividades y recursos desarrollados durante el curso.</p>
-    </div>
-  </section>
-
-  <!-- Módulos -->
   <main>
+    <section class="intro-section">
+      <h2>Bienvenido a mi Portafolio de Arquitectura de Software</h2>
+      <p>Este espacio recopila los proyectos, análisis y aprendizajes desarrollados a lo largo del curso. La arquitectura de software es el pilar fundamental en la creación de sistemas robustos, escalables y eficientes. A través de las siguientes unidades, se exploran desde los conceptos teóricos hasta la aplicación de patrones y estándares en casos prácticos.</p>
+    </section>
+
     <section class="modulos">
-      <div class="modulo" onclick="location.href='unidad1/index.html'">
+      <a href="unidad1/index.html" class="modulo">
         <h2>Unidad 1</h2>
-        <p>Explica los Fundamentos de la Arquitectura de Software, utilizando los estándares internacionales, para la producción del software.</p>
-      </div>
-      <div class="modulo" onclick="location.href='unidad2/index.html'">
+        <p>Fundamentos y conceptos de la Arquitectura de Software.</p>
+      </a>
+      <a href="unidad2/index.html" class="modulo">
         <h2>Unidad 2</h2>
-        <p>Contenido intermedio y análisis aplicado.</p>
-      </div>
-      <div class="modulo" onclick="location.href='unidad3/index.html'">
+        <p>Análisis de casos, herramientas digitales y evaluación de procesos.</p>
+      </a>
+      <a href="unidad3/index.html" class="modulo">
         <h2>Unidad 3</h2>
-        <p>Casos prácticos y herramientas digitales.</p>
-      </div>
-      <div class="modulo" onclick="location.href='unidad4/index.html'">
+        <p>Diseño de soluciones, implementación y validación de resultados.</p>
+      </a>
+      <a href="unidad4/index.html" class="modulo">
         <h2>Unidad 4</h2>
-        <p>Síntesis final y propuestas de mejora.</p>
-      </div>
+        <p>Síntesis de aprendizajes, propuestas de mejora y evaluación final.</p>
+      </a>
     </section>
   </main>
 
-  <!-- Pie de página -->
   <footer>
-    <p>© 2025 Jesús Alfredo Rodríguez Tarazona</p>
+    <p>© 2025 - Jesús Alfredo Rodriguez Tarazona</p>
   </footer>
+
 </body>
 </html>
+

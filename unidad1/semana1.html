@@ -2,67 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Unidad 1 - Semana 1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unidad 1, Semana 1 - Arquitectura de Software</title>
+  
+  <meta name="description" content="Contenido de la Semana 1: conceptos fundamentales, sílabo y actividades sobre arquitectura de software.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
-  <style>
-    .logo-upla {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 90px;
-      height: auto;
-      z-index: 2;
-    }
-
-    iframe {
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      margin-top: 20px;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <img src="https://grados.upla.edu.pe/Herramientas/Recursos/imagenes/LOGO-OFICINA.png" alt="Logo UPLA" class="logo-upla">
-    <h1>Semana 1</h1>
-    <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
+
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="../index.html" class="nav-logo">
+        <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="semana1.html">Semana 1</a></li>
+        <li><a href="semana2.html">Semana 2</a></li>
+        <li><a href="semana3.html">Semana 3</a></li>
+        <li><a href="semana4.html">Semana 4</a></li>
+      </ul>
+
+      <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
+    </nav>
   </header>
-
   <main>
-    <section class="modulos">
-      <div class="modulo">
-        <h2>📘 Contenido de la semana</h2>
-        <p>Analiza los conceptos fundamentales de la arquitectura de software, reconociendo su importancia en el desarrollo de sistemas eficientes.</p>
-      </div>
-    </section>
+    <article class="modulo">
+      <h2>📘 Contenido de la Semana 1</h2>
+      <p>Análisis de los conceptos fundamentales de la arquitectura de software, reconociendo su importancia en el desarrollo de sistemas eficientes y escalables.</p>
+    </article>
 
-    <section class="modulos">
-      <div class="modulo">
-        <h2>Silabo</h2>
-
-        <!-- Documento 1 -->
-        <iframe src="https://drive.google.com/file/d/1q9QdbgO1IgpNfQkO2jZ6hdSKi1U6Y9I1/preview" width="100%" height="480" allow="autoplay"></iframe>
-
-        <h2>Actividad</h2>
-
-        <h2>Arquitectura de software: Comparación de definiciones normativas y académicas</h2>
-        <iframe src="https://drive.google.com/file/d/1vJ-TvsrbmF4EiwZECG5JO1-3YC2I5VbR/preview" width="100%" height="480" allow="autoplay"></iframe>
-<h2>Diferencias entre Diseño de Software y Arquitectura en el Sistema de Plaza Vea</h2>
-        <iframe src="https://drive.google.com/file/d/1N1pJLSWpE2flc3No8lZvAsuuWqgYUJYU/preview" width="100%" height="480" allow="autoplay"></iframe>
-<h2>Arquitectura de Microservicios de Spotify</h2>
-        <iframe src="https://drive.google.com/file/d/1sN4qqaaNSCMt0z7D6zKs5tUMGjhl9_Np/preview" width="100%" height="480" allow="autoplay"></iframe>
-<h2>Impacto de la Arquitectura en la Calidad y Eficiencia del Sistema Movilbus</h2>
-        <iframe src="https://drive.google.com/file/d/1Z2sRK3ei-VPUd_irlBCqe-MaN7G1zig9/preview" width="100%" height="480" allow="autoplay"></iframe>
-      </div>
-    </section>
+    <article class="modulo">
+      <h2>📄 Sílabo del Curso</h2>
+      <p>Documento oficial que detalla los objetivos, contenidos y sistema de evaluación del curso.</p>
+      <iframe src="https://drive.google.com/file/d/1q9QdbgO1IgpNfQkO2jZ6hdSKi1U6Y9I1/preview"></iframe>
+    </article>
+    
+    <article class="modulo">
+        <h2>Actividad: Comparación de Definiciones</h2>
+        <p>Análisis comparativo entre las definiciones normativas y académicas de la arquitectura de software.</p>
+        <iframe src="https://drive.google.com/file/d/1vJ-TvsrbmF4EiwZECG5JO1-3YC2I5VbR/preview"></iframe>
+    </article>
+    
+    <article class="modulo">
+        <h2>Actividad: Diseño vs. Arquitectura en Plaza Vea</h2>
+        <p>Estudio de las diferencias clave entre el diseño de software y la arquitectura en el sistema de Plaza Vea.</p>
+        <iframe src="https://drive.google.com/file/d/1N1pJLSWpE2flc3No8lZvAsuuWqgYUJYU/preview"></iframe>
+    </article>
+    
+    <article class="modulo">
+        <h2>Actividad: Arquitectura de Microservicios de Spotify</h2>
+        <p>Análisis de la exitosa implementación de una arquitectura de microservicios en Spotify.</p>
+        <iframe src="https://drive.google.com/file/d/1sN4qqaaNSCMt0z7D6zKs5tUMGjhl9_Np/preview"></iframe>
+    </article>
+    
+    <article class="modulo">
+        <h2>Actividad: Impacto Arquitectónico en Movilbus</h2>
+        <p>Evaluación del impacto de las decisiones de arquitectura en la calidad y eficiencia del sistema de Movilbus.</p>
+        <iframe src="https://drive.google.com/file/d/1Z2sRK3ei-VPUd_irlBCqe-MaN7G1zig9/preview"></iframe>
+    </article>
   </main>
 
   <footer>
-    <p><a href="index.html">← Volver a Unidad 1</a></p>
+    <p><a href="index.html">← Volver al índice de la Unidad 1</a></p>
   </footer>
+
 </body>
 </html>
 
