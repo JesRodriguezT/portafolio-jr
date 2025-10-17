@@ -29,3 +29,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+// script.js
+import { supabase } from './supabase-client.js';
+
+// ... (tu código existente del contador, etc.) ...
+
+// --- LÓGICA DE AUTENTICACIÓN ---
+
+const loginForm = document.getElementById('login-form');
+const logoutButton = document.getElementById('logout-button'); // Necesitaremos un botón de logout
+
+if (loginForm) {
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Evita que la página se recargue
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Intenta iniciar sesión
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
+
+    if (error) {
+      alert('Error al iniciar sesión: ' + error.message);
+      // Opcional: Intenta registrar al usuario si el login falla (ej: si no existe)
+      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+      });
+
+      if (signUpError) {
+        alert('Error al registrar usuario: ' + signUpError.message);
+      } else {
+        alert('Cuenta creada. ¡Bienvenido!');
+        window.location.href = 'index.html'; // Redirige después de registrar
+      }
+    } else {
+      alert('Inicio de sesión exitoso. ¡Bienvenido!');
+      window.location.href = 'index.html'; // Redirige después de iniciar sesión
+    }
+  });
+}

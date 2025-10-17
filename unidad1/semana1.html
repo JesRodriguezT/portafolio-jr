@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <title>Unidad 1, Semana 1 - Arquitectura de Software</title>
   
-  <meta name="description" content="Contenido de la Semana 1: conceptos fundamentales, sílabo y actividades sobre arquitectura de software.">
+  <meta name="description" content="Contenido de la Semana 1: conceptos, sílabo y actividades.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  
+  <script type="module" src="../semana.js" defer></script>
 </head>
 <body>
 
@@ -17,17 +20,17 @@
       <a href="../index.html" class="nav-logo">
         <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
       </a>
-
       <ul class="nav-menu">
         <li><a href="semana1.html">Semana 1</a></li>
         <li><a href="semana2.html">Semana 2</a></li>
         <li><a href="semana3.html">Semana 3</a></li>
         <li><a href="semana4.html">Semana 4</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
       </ul>
-
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
   </header>
+
   <main>
     <article class="modulo">
       <h2>📘 Contenido de la Semana 1</h2>
@@ -35,33 +38,15 @@
     </article>
 
     <article class="modulo">
-      <h2>📄 Sílabo del Curso</h2>
-      <p>Documento oficial que detalla los objetivos, contenidos y sistema de evaluación del curso.</p>
-      <iframe src="https://drive.google.com/file/d/1q9QdbgO1IgpNfQkO2jZ6hdSKi1U6Y9I1/preview"></iframe>
-    </article>
-    
-    <article class="modulo">
-        <h2>Actividad: Comparación de Definiciones</h2>
-        <p>Análisis comparativo entre las definiciones normativas y académicas de la arquitectura de software.</p>
-        <iframe src="https://drive.google.com/file/d/1vJ-TvsrbmF4EiwZECG5JO1-3YC2I5VbR/preview"></iframe>
-    </article>
-    
-    <article class="modulo">
-        <h2>Actividad: Diseño vs. Arquitectura en Plaza Vea</h2>
-        <p>Estudio de las diferencias clave entre el diseño de software y la arquitectura en el sistema de Plaza Vea.</p>
-        <iframe src="https://drive.google.com/file/d/1N1pJLSWpE2flc3No8lZvAsuuWqgYUJYU/preview"></iframe>
-    </article>
-    
-    <article class="modulo">
-        <h2>Actividad: Arquitectura de Microservicios de Spotify</h2>
-        <p>Análisis de la exitosa implementación de una arquitectura de microservicios en Spotify.</p>
-        <iframe src="https://drive.google.com/file/d/1sN4qqaaNSCMt0z7D6zKs5tUMGjhl9_Np/preview"></iframe>
-    </article>
-    
-    <article class="modulo">
-        <h2>Actividad: Impacto Arquitectónico en Movilbus</h2>
-        <p>Evaluación del impacto de las decisiones de arquitectura en la calidad y eficiencia del sistema de Movilbus.</p>
-        <iframe src="https://drive.google.com/file/d/1Z2sRK3ei-VPUd_irlBCqe-MaN7G1zig9/preview"></iframe>
+        <h2>Recursos PDF 📄</h2>
+        
+        <ul id="pdf-list" class="file-list"></ul>
+
+        <div id="upload-form-container" style="display: none;" class="upload-area">
+            <h3>Subir nuevo PDF</h3>
+            <input type="file" id="pdf-upload" accept=".pdf">
+            <button id="upload-button" class="action-button">Subir Archivo</button>
+        </div>
     </article>
   </main>
 
@@ -71,6 +56,4 @@
 
 </body>
 </html>
-
-
 

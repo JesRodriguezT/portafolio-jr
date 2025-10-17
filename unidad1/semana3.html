@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>Unidad 1, Semana 3 - Arquitectura de Software</title>
   
-  <meta name="description" content="Contenido de la Semana 3: estudio de patrones arquitectónicos como cliente-servidor, capas y microservicios.">
+  <meta name="description" content="Contenido de la Semana 5 del curso de Arquitectura de Software.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../semana.js" defer></script>
 </head>
 <body>
 
@@ -18,29 +20,36 @@
         <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
       </a>
       <ul class="nav-menu">
-        <li><a href="semana1.html">Semana 1</a></li>
-        <li><a href="semana2.html">Semana 2</a></li>
-        <li><a href="semana3.html">Semana 3</a></li>
-        <li><a href="semana4.html">Semana 4</a></li>
+        <li><a href="semana5.html">Semana 5</a></li>
+        <li><a href="semana6.html">Semana 6</a></li>
+        <li><a href="semana7.html">Semana 7</a></li>
+        <li><a href="semana8.html">Semana 8</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
       </ul>
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
   </header>
+
   <main>
     <article class="modulo">
-      <h2>📘 Contenido de la Semana 3</h2>
-      <p>Se abordaron patrones arquitectónicos fundamentales como cliente-servidor, capas y microservicios, analizando sus ventajas, desventajas y aplicaciones en distintos entornos tecnológicos.</p>
+      <h2>📘 Contenido de la Semana 5</h2>
+      <p>Aquí va la descripción del contenido, temas y objetivos de la Semana 5.</p>
     </article>
 
     <article class="modulo">
-      <h2>Material Complementario</h2>
-      <p>Recursos adicionales y lecturas recomendadas para profundizar en los patrones arquitectónicos discutidos.</p>
-      <iframe src="https://drive.google.com/file/d/1q9QdbgO1IgpNfQkO2jZ6hdSKi1U6Y9I1/preview"></iframe>
+        <h2>Recursos PDF 📄</h2>
+        <ul id="pdf-list" class="file-list">
+          </ul>
+        <div id="upload-form-container" style="display: none;" class="upload-area">
+            <h3>Subir nuevo PDF</h3>
+            <input type="file" id="pdf-upload" accept=".pdf">
+            <button id="upload-button" class="action-button">Subir Archivo</button>
+        </div>
     </article>
   </main>
 
   <footer>
-    <p><a href="index.html">← Volver al índice de la Unidad 1</a></p>
+    <p><a href="index.html">← Volver al índice de la Unidad 2</a></p>
   </footer>
 
 </body>

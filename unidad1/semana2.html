@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>Unidad 1, Semana 2 - Arquitectura de Software</title>
   
-  <meta name="description" content="Contenido de la Semana 2: estándares internacionales y su aplicación en casos prácticos.">
+  <meta name="description" content="Contenido de la Semana 5 del curso de Arquitectura de Software.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../semana.js" defer></script>
 </head>
 <body>
 
@@ -18,41 +20,36 @@
         <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
       </a>
       <ul class="nav-menu">
-        <li><a href="semana1.html">Semana 1</a></li>
-        <li><a href="semana2.html">Semana 2</a></li>
-        <li><a href="semana3.html">Semana 3</a></li>
-        <li><a href="semana4.html">Semana 4</a></li>
+        <li><a href="semana5.html">Semana 5</a></li>
+        <li><a href="semana6.html">Semana 6</a></li>
+        <li><a href="semana7.html">Semana 7</a></li>
+        <li><a href="semana8.html">Semana 8</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
       </ul>
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
   </header>
+
   <main>
     <article class="modulo">
-      <h2>📘 Contenido de la Semana 2</h2>
-      <p>Identificación y descripción de los estándares internacionales aplicables a la arquitectura de software, relacionándolos con casos prácticos para entender su implementación real.</p>
+      <h2>📘 Contenido de la Semana 5</h2>
+      <p>Aquí va la descripción del contenido, temas y objetivos de la Semana 5.</p>
     </article>
 
     <article class="modulo">
-      <h2>Actividad: Análisis de Estándares en Tinder</h2>
-      <p>Estudio sobre la aplicación de estándares de arquitectura en el desarrollo y operación del aplicativo móvil Tinder.</p>
-      <iframe src="https://drive.google.com/file/d/1n501_eYdAxsl9LbcArAXr4YrLGoZmeeF/preview"></iframe>
-    </article>
-    
-    <article class="modulo">
-        <h2>Actividad: Arquitectura Basada en Estándares para Plaza Vea</h2>
-        <p>Propuesta y diseño de una arquitectura de software basada en estándares para el sistema de compras en línea de Plaza Vea.</p>
-        <iframe src="https://drive.google.com/file/d/19-N9Fzn0YojfaB5hj_x9z1ar1QaSj4Hp/preview"></iframe>
-    </article>
-    
-    <article class="modulo">
-        <h2>Actividad: Evaluación de Calidad con ISO/IEC 25010</h2>
-        <p>Análisis de la calidad arquitectónica del sistema de Plaza Vea utilizando como marco la norma ISO/IEC 25010.</p>
-        <iframe src="https://drive.google.com/file/d/1arFHx5C4vzwQtbO2Sx6182Sibar76bWu/preview"></iframe>
+        <h2>Recursos PDF 📄</h2>
+        <ul id="pdf-list" class="file-list">
+          </ul>
+        <div id="upload-form-container" style="display: none;" class="upload-area">
+            <h3>Subir nuevo PDF</h3>
+            <input type="file" id="pdf-upload" accept=".pdf">
+            <button id="upload-button" class="action-button">Subir Archivo</button>
+        </div>
     </article>
   </main>
 
   <footer>
-    <p><a href="index.html">← Volver al índice de la Unidad 1</a></p>
+    <p><a href="index.html">← Volver al índice de la Unidad 2</a></p>
   </footer>
 
 </body>

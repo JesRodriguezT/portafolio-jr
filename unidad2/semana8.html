@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>Unidad 2, Semana 8 - Arquitectura de Software</title>
   
-  <meta name="description" content="Contenido de la Semana 8 del curso de Arquitectura de Software.">
+  <meta name="description" content="Contenido de la Semana 5 del curso de Arquitectura de Software.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../semana.js" defer></script>
 </head>
 <body>
 
@@ -22,6 +24,7 @@
         <li><a href="semana6.html">Semana 6</a></li>
         <li><a href="semana7.html">Semana 7</a></li>
         <li><a href="semana8.html">Semana 8</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
       </ul>
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
@@ -29,14 +32,20 @@
 
   <main>
     <article class="modulo">
-      <h2>📘 Contenido de la Semana 8</h2>
-      <p>Aquí va la descripción del contenido, temas y objetivos de la Semana 8.</p>
+      <h2>📘 Contenido de la Semana 5</h2>
+      <p>Aquí va la descripción del contenido, temas y objetivos de la Semana 5.</p>
     </article>
 
     <article class="modulo">
-      <h2>Actividades y Materiales</h2>
-      <p>Aquí puedes añadir iframes con los documentos de Google Drive, videos o cualquier otro material para esta semana.</p>
-      </article>
+        <h2>Recursos PDF 📄</h2>
+        <ul id="pdf-list" class="file-list">
+          </ul>
+        <div id="upload-form-container" style="display: none;" class="upload-area">
+            <h3>Subir nuevo PDF</h3>
+            <input type="file" id="pdf-upload" accept=".pdf">
+            <button id="upload-button" class="action-button">Subir Archivo</button>
+        </div>
+    </article>
   </main>
 
   <footer>

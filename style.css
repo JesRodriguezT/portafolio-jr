@@ -294,3 +294,70 @@ iframe {
 }
 
 /* ...otros estilos... */
+/* ---------------------------------- */
+/* 9. ESTILOS PARA GESTIÓN DE ARCHIVOS */
+/* ---------------------------------- */
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.file-list li:last-child {
+  border-bottom: none;
+}
+
+.file-list a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.file-list a:hover {
+  color: var(--color-accent);
+}
+
+.delete-button, .action-button {
+  background-color: #ff4d4d; /* Rojo para eliminar */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-main);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+.action-button {
+  background-color: var(--color-accent); /* Cian para acciones primarias */
+  color: var(--color-background-end);
+  margin-top: 1rem;
+}
+
+.action-button:hover {
+  background-color: #55e4c4;
+}
+
+.upload-area {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.upload-area input[type="file"] {
+  color: var(--color-text-secondary);
+}
