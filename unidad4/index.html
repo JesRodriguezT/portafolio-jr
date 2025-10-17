@@ -2,34 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Unidad 4 - Portafolio</title>
+  <title>Unidad 4 - Arquitectura de Software</title>
+  <meta name="description" content="Portafolio de la Unidad 4, enfocada en la síntesis de aprendizajes, propuestas de mejora y evaluación final del curso.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="../style.css">
-  <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Unidad 4</h1>
-    <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
+
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="../index.html" class="nav-logo">
+        <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="semana13.html">Semana 13</a></li>
+        <li><a href="semana14.html">Semana 14</a></li>
+        <li><a href="semana15.html">Semana 15</a></li>
+        <li><a href="semana16.html">Semana 16</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
+      </ul>
+      <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Clase 1: Síntesis de aprendizajes</h2>
-      <p>Contenido de la clase 1...</p>
+    <section class="intro-section">
+      <h2>Unidad 4: Síntesis y Propuestas Finales</h2>
+      <p>La unidad final consolida todo el conocimiento adquirido, enfocándose en la síntesis de patrones, la elaboración de propuestas de mejora para sistemas reales y la presentación de los resultados finales del proyecto.</p>
+    </section>
 
-      <h2>Clase 2: Propuestas de mejora</h2>
-      <p>Contenido de la clase 2...</p>
-
-      <h2>Clase 3: Presentación de resultados</h2>
-      <p>Contenido de la clase 3...</p>
-
-      <h2>Clase 4: Evaluación final</h2>
-      <p>Contenido de la clase 4...</p>
+    <section class="modulos">
+      <a href="semana13.html" class="modulo">
+        <h2>Semana 13</h2>
+        <p>Síntesis de los aprendizajes clave de las unidades anteriores y repaso de conceptos avanzados.</p>
+      </a>
+      <a href="semana14.html" class="modulo">
+        <h2>Semana 14</h2>
+        <p>Desarrollo y documentación de propuestas de mejora arquitectónica para casos de estudio.</p>
+      </a>
+      <a href="semana15.html" class="modulo">
+        <h2>Semana 15</h2>
+        <p>Preparación y estructuración de la presentación de resultados y hallazgos del proyecto.</p>
+      </a>
+      <a href="semana16.html" class="modulo">
+        <h2>Semana 16</h2>
+        <p>Evaluación final del curso y conclusiones generales sobre la arquitectura de software.</p>
+      </a>
     </section>
   </main>
 
   <footer>
-    <p><a href="../index.html">← Volver al inicio</a></p>
+    <p><a href="../index.html">← Volver al Portafolio Principal</a></p>
   </footer>
+
 </body>
 </html>

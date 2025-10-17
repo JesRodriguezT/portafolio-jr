@@ -2,34 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Unidad 3 - Portafolio</title>
+  <title>Unidad 3 - Arquitectura de Software</title>
+  <meta name="description" content="Portafolio de la Unidad 3, enfocada en el diseño de soluciones y la implementación técnica.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="../style.css">
-  <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Unidad 3</h1>
-    <button onclick="toggleDarkMode()">🌗 Modo Claro/Oscuro</button>
+
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="../index.html" class="nav-logo">
+        <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="semana9.html">Semana 9</a></li>
+        <li><a href="semana10.html">Semana 10</a></li>
+        <li><a href="semana11.html">Semana 11</a></li>
+        <li><a href="semana12.html">Semana 12</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
+      </ul>
+      <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Clase 1: Diseño de soluciones</h2>
-      <p>Contenido de la clase 1...</p>
+    <section class="intro-section">
+      <h2>Unidad 3: Diseño e Implementación de Soluciones</h2>
+      <p>Esta unidad se centra en el proceso práctico de transformar los requisitos en arquitecturas tangibles, cubriendo el diseño de soluciones, la implementación técnica de los patrones estudiados y la validación de los resultados obtenidos.</p>
+    </section>
 
-      <h2>Clase 2: Implementación técnica</h2>
-      <p>Contenido de la clase 2...</p>
-
-      <h2>Clase 3: Validación de resultados</h2>
-      <p>Contenido de la clase 3...</p>
-
-      <h2>Clase 4: Documentación final</h2>
-      <p>Contenido de la clase 4...</p>
+    <section class="modulos">
+      <a href="semana9.html" class="modulo">
+        <h2>Semana 9</h2>
+        <p>Técnicas y metodologías para el diseño de soluciones de software basadas en requisitos.</p>
+      </a>
+      <a href="semana10.html" class="modulo">
+        <h2>Semana 10</h2>
+        <p>Implementación técnica de patrones arquitectónicos y su integración en un sistema cohesivo.</p>
+      </a>
+      <a href="semana11.html" class="modulo">
+        <h2>Semana 11</h2>
+        <p>Procesos de pruebas y validación de los atributos de calidad de una arquitectura de software.</p>
+      </a>
+      <a href="semana12.html" class="modulo">
+        <h2>Semana 12</h2>
+        <p>Documentación final de la arquitectura, incluyendo diagramas, decisiones y justificaciones técnicas.</p>
+      </a>
     </section>
   </main>
 
   <footer>
-    <p><a href="../index.html">← Volver al inicio</a></p>
+    <p><a href="../index.html">← Volver al Portafolio Principal</a></p>
   </footer>
+
 </body>
 </html>
