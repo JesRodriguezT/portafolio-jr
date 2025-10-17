@@ -9,6 +9,8 @@
 
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../semana.js" defer></script>
 </head>
 <body>
 
@@ -17,15 +19,19 @@
       <a href="../index.html" class="nav-logo">
         <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
       </a>
+      
       <ul class="nav-menu">
         <li><a href="semana5.html">Semana 5</a></li>
         <li><a href="semana6.html">Semana 6</a></li>
         <li><a href="semana7.html">Semana 7</a></li>
         <li><a href="semana8.html">Semana 8</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
       </ul>
+      
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
   </header>
+
   <main>
     <section class="intro-section">
       <h2>Unidad 2: Herramientas y Evaluación</h2>
