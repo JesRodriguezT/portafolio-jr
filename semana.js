@@ -36,7 +36,6 @@ async function cargarPdfs(semanaId, session) {
     if (!pdfList) return;
     pdfList.innerHTML = '<li>Cargando...</li>';
 
-    // 1. Obtiene los registros de la tabla 'archivos' para esta semana
     const { data, error } = await supabase
         .from('archivos')
         .select('*')
@@ -49,20 +48,38 @@ async function cargarPdfs(semanaId, session) {
     }
     
     if (data.length === 0) {
-        pdfList.innerHTML = '<li>Aún no hay archivos para esta semana.</li>';
+        // Si no hay archivos, removemos la lista para que no ocupe espacio
+        pdfList.innerHTML = ''; 
+        // Verificamos si ya existe un mensaje para no duplicarlo
+        const parent = pdfList.parentNode;
+        if (!parent.querySelector('.no-files-message')) {
+            const noFilesMessage = document.createElement('p');
+            noFilesMessage.className = 'no-files-message'; // Añadimos una clase para identificarlo
+            noFilesMessage.textContent = 'Aún no hay archivos para esta semana.';
+            parent.appendChild(noFilesMessage);
+        }
         return;
     }
+    
+    // Limpiamos mensajes previos de "no hay archivos" antes de añadir la cuadrícula
+    const parent = pdfList.parentNode;
+    const existingMessage = parent.querySelector('.no-files-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
 
-    // 2. Genera el HTML para cada archivo
+    // NUEVA ESTRUCTURA HTML PARA CADA TARJETA
     const bucketUrl = 'https://ppyflcwibvjmfghfsxnm.supabase.co/storage/v1/object/public/pdfs/';
     pdfList.innerHTML = data.map(archivo => `
         <li>
-            <a href="${bucketUrl}${archivo.path_storage}" target="_blank">${archivo.nombre_archivo}</a>
+            <div class="file-icon">📄</div>
+            <a href="${bucketUrl}${archivo.path_storage}" target="_blank" title="${archivo.nombre_archivo}">
+                ${archivo.nombre_archivo}
+            </a>
             ${session ? `<button class="delete-button" data-path="${archivo.path_storage}" data-id="${archivo.id}">Eliminar</button>` : ''}
         </li>
     `).join('');
 
-    // 3. Añade eventos a los botones de eliminar (solo si hay sesión)
     if (session) {
         document.querySelectorAll('.delete-button').forEach(button => {
             button.addEventListener('click', (e) => {
