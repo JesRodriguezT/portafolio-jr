@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Unidad 1 - Arquitectura de Software</title>
-  
   <meta name="description" content="Portafolio de la Unidad 1, cubriendo los fundamentos y conceptos clave de la Arquitectura de Software.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../style.css">
-  <script src="../script.js" defer></script>
+  <script type="module" src="../supabase-client.js"></script>
+  <script type="module" src="../script.js" defer></script>
 </head>
 <body>
 
@@ -17,14 +17,13 @@
       <a href="../index.html" class="nav-logo">
         <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
       </a>
-
       <ul class="nav-menu">
         <li><a href="semana1.html">Semana 1</a></li>
         <li><a href="semana2.html">Semana 2</a></li>
         <li><a href="semana3.html">Semana 3</a></li>
         <li><a href="semana4.html">Semana 4</a></li>
+        <li id="logout-menu-item" style="display: none;"><a href="#" id="logout-button">Cerrar Sesión</a></li>
       </ul>
-
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
   </header>
@@ -40,17 +39,14 @@
         <h2>Semana 1</h2>
         <p>Introducción, objetivos y análisis de definiciones normativas y académicas.</p>
       </a>
-
       <a href="semana2.html" class="modulo">
         <h2>Semana 2</h2>
         <p>Estándares internacionales aplicables a la arquitectura y su uso en casos prácticos.</p>
       </a>
-
       <a href="semana3.html" class="modulo">
         <h2>Semana 3</h2>
         <p>Estudio de patrones arquitectónicos clave como cliente-servidor, capas y microservicios.</p>
       </a>
-
       <a href="semana4.html" class="modulo">
         <h2>Semana 4</h2>
         <p>Síntesis de estilos, patrones y elaboración de propuestas de mejora para proyectos reales.</p>

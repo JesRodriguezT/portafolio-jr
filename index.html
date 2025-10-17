@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Mi Portafolio de Arquitectura de Software</title>
-  
   <meta name="description" content="Portafolio del curso de Arquitectura de Software, recopilando los trabajos de las 4 unidades.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script type="module" src="supabase-client.js"></script>
+  <script type="module" src="script.js" defer></script>
 </head>
 <body>
 
@@ -17,7 +17,6 @@
       <a href="index.html" class="nav-logo">
         <img src="https://presentacion.gestorinfo.upla.edu.pe/storage/logo.png" alt="Logo UPLA">
       </a>
-
       <ul class="nav-menu">
         <li><a href="unidad1/index.html">Unidad 1</a></li>
         <li><a href="unidad2/index.html">Unidad 2</a></li>
@@ -26,14 +25,14 @@
         <li><a href="perfil.html">Sobre Mí</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
-
       <button id="darkModeToggle" class="nav-toggle-button">🌗</button>
     </nav>
   </header>
+
   <main>
     <section class="intro-section">
       <h2>Bienvenido a mi Portafolio de Arquitectura de Software</h2>
-      <p>Este espacio recopila los proyectos, análisis y aprendizajes desarrollados a lo largo del curso. La arquitectura de software es el pilar fundamental en la creación de sistemas robustos, escalables y eficientes. A través de las siguientes unidades, se exploran desde los conceptos teóricos hasta la aplicación de patrones y estándares en casos prácticos.</p>
+      <p>Este espacio recopila los proyectos, análisis y aprendizajes desarrollados a lo largo del curso. La arquitectura de software es el pilar fundamental en la creación de sistemas robustos, escalables y eficientes.</p>
     </section>
 
     <section class="modulos">
@@ -57,7 +56,8 @@
   </main>
 
   <footer>
-    <p>© 2025 - Jesús Alfredo Rodriguez Tarazona</p>
+    <p>Visitas Totales: <strong id="visit-counter">...</strong></p>
+    <p>© 2025 - Tu Nombre Aquí</p>
   </footer>
 
 </body>

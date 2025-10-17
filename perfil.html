@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Sobre Mí - Portafolio de Software</title>
-  
   <meta name="description" content="Conoce más sobre mi perfil profesional, mis habilidades y mi pasión por la tecnología y la arquitectura de software.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script type="module" src="supabase-client.js"></script>
+  <script type="module" src="script.js" defer></script>
 </head>
 <body>
 
@@ -31,9 +31,8 @@
   <main>
     <article class="modulo" style="text-align: center;">
       <img src="images/jesus.jpeg" alt="Foto de perfil de Jesús" class="profile-picture">
-      
-      <h2>Jesús Alfredo Rodriguez Tarazona</h2>
-      <p style="color: var(--color-accent); font-weight: bold;">Estudiante de Ingeniería de Sistema y Computación</p>
+      <h2>Jesús Rodriguez Taipe</h2>
+      <p style="color: var(--color-accent); font-weight: bold;">Estudiante de Ingeniería de Software</p>
       <p class="profile-bio">
         Apasionado por la tecnología y la creación de soluciones de software eficientes y escalables. Me especializo en el diseño de arquitecturas robustas que resuelven problemas complejos. Busco constantemente aprender nuevas tecnologías y aplicar mis conocimientos en proyectos desafiantes.
       </p>
@@ -41,23 +40,20 @@
 
     <article class="modulo">
       <h2>Mis Habilidades Técnicas 🛠️</h2>
-      <div class="skills-container">
-        <ul class="skills-list">
-          <li><strong>Lenguajes:</strong> Java, Python, JavaScript, SQL</li>
-          <li><strong>Frameworks:</strong> Spring Boot, React, Node.js</li>
-          <li><strong>Bases de Datos:</strong> PostgreSQL, MongoDB, MySQL</li>
-          <li><strong>Herramientas:</strong> Git, Docker, Jenkins, Postman</li>
-          <li><strong>Cloud:</strong> AWS (EC2, S3), Google Cloud Platform</li>
-        </ul>
-      </div>
+      <ul class="skills-list">
+        <li><strong>Lenguajes:</strong> Java, Python, JavaScript, SQL</li>
+        <li><strong>Frameworks:</strong> Spring Boot, React, Node.js</li>
+        <li><strong>Bases de Datos:</strong> PostgreSQL, MongoDB, MySQL</li>
+        <li><strong>Herramientas:</strong> Git, Docker, Jenkins, Postman</li>
+      </ul>
     </article>
 
     <article class="modulo">
       <h2>Contacto 📬</h2>
       <p>¡Conectemos! Siempre estoy abierto a discutir nuevos proyectos, ideas creativas o oportunidades para colaborar.</p>
       <ul class="contact-list">
-        <li><a href="URL_DE_TU_LINKEDIN" target="_blank">LinkedIn</a></li>
-        <li><a href="URL_DE_TU_GITHUB" target="_blank">GitHub</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+        <li><a href="#" target="_blank">GitHub</a></li>
         <li><a href="mailto:tu-correo@ejemplo.com">Envíame un correo</a></li>
       </ul>
     </article>
