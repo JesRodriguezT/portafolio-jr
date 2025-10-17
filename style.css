@@ -189,3 +189,108 @@ iframe {
   margin-right: auto;
   color: var(--color-text-secondary);
 }
+/* ---------------------------------- */
+/* 8. ESTILOS DE LA PÁGINA DE LOGIN   */
+/* ---------------------------------- */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--shadow-strong);
+}
+
+.login-form h2 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--color-background-start);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-main);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-background-end);
+  border: none;
+  border-radius: var(--border-radius-main);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #55e4c4; /* Un tono ligeramente más claro del cian */
+}
+
+.login-links {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-links a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.login-links a:hover {
+  color: var(--color-accent);
+}
+/* ---------------------------------- */
+/* 7. ESTILOS DE LA PÁGINA DE PERFIL  */
+/* ---------------------------------- */
+
+.profile-picture {
+  width: 150px;  /* <-- ESTE VALOR CONTROLA EL ANCHO */
+  height: 150px; /* <-- ESTE VALOR CONTROLA EL ALTO */
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid var(--color-accent);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-strong);
+}
+
+/* ...otros estilos... */
